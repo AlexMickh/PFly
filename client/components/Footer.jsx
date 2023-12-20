@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     height: 68,
     position: "absolute",
     top: 1.5,
-    left: 170,
+    left: 286,
   },
 
   search: {
@@ -53,6 +53,6 @@ const styles = StyleSheet.create({
     height: 68,
     position: "absolute",
     top: 1.5,
-    left: 286,
+    left: 170,
   },
 });

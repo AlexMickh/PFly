@@ -59,8 +59,9 @@ const styles = StyleSheet.create({
   dislike1: {
     width: 60,
     height: 60,
-    marginTop: 35,
-    marginLeft: 30,
+    position: "absolute",
+    top: 109,
+    left: 30,
   },
 
   dislike2: {
