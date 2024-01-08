@@ -1,21 +1,36 @@
 import React from "react";
-import { Image, StyleSheet, View } from "react-native";
+import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 export const Footer = () => {
+  const navigation = useNavigation();
+
+  const moveToHome = () => {
+    navigation.navigate("MainPage");
+  };
+
+  const moveToSearch = () => {
+    navigation.navigate("Search");
+  };
+
   return (
     <View style={styles.footer}>
-      <Image
-        style={styles.home}
-        source={require("../public/images/home_icon.png")}
-      />
+      <TouchableOpacity onPress={() => moveToHome()}>
+        <Image
+          style={styles.home}
+          source={require("../public/images/home_icon.png")}
+        />
+      </TouchableOpacity>
       <Image
         style={styles.chat}
         source={require("../public/images/chat_icon.png")}
       />
-      <Image
-        style={styles.search}
-        source={require("../public/images/search_icon.png")}
-      />
+      <TouchableOpacity onPress={() => moveToSearch()}>
+        <Image
+          style={styles.search}
+          source={require("../public/images/search_icon.png")}
+        />
+      </TouchableOpacity>
     </View>
   );
 };
