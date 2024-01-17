@@ -4,6 +4,7 @@ import { Sign } from "./pages/Sign";
 import { MainPage } from "./pages/MainPage";
 import { Signin } from "./pages/Signin";
 import { Search } from "./pages/Search";
+import { Chat } from "./pages/Chat";
 
 const Stack = createNativeStackNavigator();
 
@@ -30,6 +31,11 @@ export const Navigation = () => {
           name="Search"
           component={Search}
           options={{ title: "PFly" }}
+        />
+        <Stack.Screen
+          name="Chat"
+          component={Chat}
+          options={{ title: "Pfly" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

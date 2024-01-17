@@ -13,6 +13,10 @@ export const Footer = () => {
     navigation.navigate("Search");
   };
 
+  const moveToChat = () => {
+    navigation.navigate("Chat");
+  };
+
   return (
     <View style={styles.footer}>
       <TouchableOpacity onPress={() => moveToHome()}>
@@ -21,10 +25,12 @@ export const Footer = () => {
           source={require("../public/images/home_icon.png")}
         />
       </TouchableOpacity>
-      <Image
-        style={styles.chat}
-        source={require("../public/images/chat_icon.png")}
-      />
+      <TouchableOpacity onPress={() => moveToChat()}>
+        <Image
+          style={styles.chat}
+          source={require("../public/images/chat_icon.png")}
+        />
+      </TouchableOpacity>
       <TouchableOpacity onPress={() => moveToSearch()}>
         <Image
           style={styles.search}

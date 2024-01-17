@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { View, TextInput, StyleSheet } from "react-native";
 import { Footer } from "../components/Footer";
 import { SkillCard } from "../components/SkillCard";
+import { gStyles } from "../styles/style";
 
 export const Search = () => {
   const [text, setText] = useState("");
@@ -42,7 +43,7 @@ export const Search = () => {
         <SkillCard text="frontend" />
         <SkillCard text="backend" />
       </View>
-      <View style={styles.footer}>
+      <View style={gStyles.footer}>
         <Footer />
       </View>
     </>
@@ -67,10 +68,5 @@ const styles = StyleSheet.create({
   cardsBlock: {
     justifyContent: "space-around",
     flexDirection: "row",
-  },
-
-  footer: {
-    position: "absolute",
-    bottom: -62,
   },
 });

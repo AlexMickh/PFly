@@ -20,6 +20,5 @@ const styles = StyleSheet.create({
 
   text: {
     alignSelf: "center",
-    textAlignVertical: "center",
   },
 });
